@@ -133,9 +133,11 @@ class MarkovChain:
             ax.annotate(str(prob), xy=(x_prob, y_prob), color='#000000', **self.text_args)
 
 
-    def draw(self, img_path=None):
+    def draw(self, draw=False,
+             img_path=None):
         """
         Draw the Markov Chain
+        if draw==True plot the graph, otherwise just return the axes
         """
         fig, ax = plt.subplots(figsize=self.figsize)
 
@@ -165,7 +167,8 @@ class MarkovChain:
         # Save the image to disk?
         if img_path:
             plt.savefig(img_path)
-        plt.show()
+        if draw:
+            plt.show()
 
         return ax
 
