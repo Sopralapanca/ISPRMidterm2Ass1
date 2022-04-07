@@ -167,4 +167,6 @@ class MarkovChain:
             plt.savefig(img_path)
         plt.show()
 
+        return ax
+
 
