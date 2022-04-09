@@ -168,6 +168,7 @@ class MarkovChain:
         if img_path:
             plt.savefig(img_path)
         if draw:
+            print("ci sono")
             plt.show()
 
         return ax
