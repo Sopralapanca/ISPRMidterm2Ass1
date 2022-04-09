@@ -134,12 +134,14 @@ class MarkovChain:
 
 
     def draw(self, draw=False,
-             img_path=None):
+             img_path=None,
+             ax=None):
         """
         Draw the Markov Chain
         if draw==True plot the graph, otherwise just return the axes
         """
-        fig, ax = plt.subplots(figsize=self.figsize)
+        if ax is None:
+            fig, ax = plt.subplots(figsize=self.figsize)
 
         # Set the axis limits
         plt.xlim(self.xlim)
